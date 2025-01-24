@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button onclick="maFonction ()">Mon bouton</button>
+        <button onclick="effacerListe()">effacer liste</button>
+        <ul id="liste"></ul>
+
+        <script>
+            let nb = 1;
+            function maFonction() {
+            let node = document.createElement("li");
+            let textnode = document.createTextNode(`liste n° ${nb++}`); // Utilisation des backticks
+            node.appendChild(textnode);
+
+            document.getElementById("liste").appendChild(node);
+            }
+
+            function effacerListe() {
+            document.getElementById("liste").innerHTML = "";
+            nb = 1;
+        }
+        </script>
+    
+    </body>
+</html>
+
